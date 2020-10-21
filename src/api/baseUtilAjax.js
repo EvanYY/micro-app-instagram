@@ -75,7 +75,6 @@ export class Request {
   }) {
     const { utilKey, url, method, data, params } = param
     if (!utilKey || !url) {
-      console.log('utilKey url 为使用util的属性 必需存在', 'color: bule')
       return false
     }
     return util[utilKey]({

@@ -17,10 +17,13 @@ import { toStore } from '@/shared/subscript-store'
 import { cloneDeep } from 'lodash'
 // 原型方法
 import dynamicDatas from '@/utils/dynamicDatas'
+import staticDatas from '@/utils/staticDatas' // 公共基除业务代码注册在原型上 静态数据
+
 const MICRO_NAME = 'MicroAppInstagram'
 
 Vue.config.productionTip = false
 Vue.prototype.$dym = dynamicDatas
+Vue.prototype.$stm = staticDatas
 
 let instance = null
 let sharedUnsubscribe = null
