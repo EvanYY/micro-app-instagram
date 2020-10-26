@@ -48,7 +48,6 @@ const responseInterceptorError = async (error) => {
       msg: error
     })
   }
-  console.error(error)
   return error
 }
 const responseInterceptorSuccess = async (response) => {

@@ -1,12 +1,16 @@
-
+import $cookie from 'js-cookie'
 export default {
   namespaced: true,
   state: {
-    isUpgrade: false
+    userId: '',
+    enterpriseId: '',
+    userName: ''
   },
   mutations: {
-    isUpgrade (state, payload) {
-      state.isUpgrade = payload
+    initApp (state) {
+      state.userId = $cookie.get('userId')
+      state.enterpriseId = $cookie.get('enterpriseId')
+      state.userName = $cookie.get('userName')
     }
   },
   actions: {

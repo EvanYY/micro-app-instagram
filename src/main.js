@@ -9,6 +9,9 @@ import i18n from '@/locale'
 // 注册全局组件
 import '@/plugins/custom'
 
+// 注册全局 VueUse()
+import '@/vue-use'
+
 // 微应用配置
 import './public-path'
 import store from './store'
@@ -38,6 +41,7 @@ function render (props) {
     VUE_APP_MODE
   }
   store.commit('MainCommon/updateMainCommon', cloneDeep(common)) // 初始化 shared module
+  store.commit('App/initApp')
   i18n.locale = 'zh-CN' // 初始化微应用语言系统
   sharedUnsubscribe = shared.subscribe(toStore) // 订阅主应用通信模型映射到当前应用
   instance = new Vue({
@@ -52,10 +56,10 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap (props) {
-  console.log(`${MICRO_NAME}  bootstraped`, props)
+  // console.log(`${MICRO_NAME}  bootstraped`, props)
 }
 export async function mount (props) {
-  console.log(`${MICRO_NAME}  mount`, props)
+  // console.log(`${MICRO_NAME}  mount`, props)
   render(props)
 }
 export async function unmount () {

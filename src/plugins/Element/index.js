@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import {
   // Button,
-  // Table,
-  // TableColumn,
+  Table,
+  TableColumn,
   Message,
   // Form,
   // FormItem,
-  // Input,
-  // InputFixed,
-  // InputNumber,
+  Input,
+  InputFixed,
+  InputNumber,
   // Checkbox,
   // CheckboxButton,
   // CheckboxGroup,
@@ -42,7 +42,7 @@ import {
   // TabPane,
   // Timeline,
   // TimelineItem,
-  MessageBox
+  MessageBox,
   // Transfer,
   // Slider,
   // Progress,
@@ -50,9 +50,11 @@ import {
   // CascaderPanel,
   // Card,
   // ColorPicker,
-  // Container,
-  // Aside,
-  // Main,
+  Container,
+  Aside,
+  // Footer,
+  // Header,
+  Main,
   // Avatar,
   // Steps,
   // Step,
@@ -67,19 +69,19 @@ import {
   // InfiniteScroll,
   // Upload,
   // Breadcrumb,
-  // BreadcrumbItem
+  BreadcrumbItem
 } from 'element-ui'
 
 // Vue.component('Button', Button)
-// Vue.component('Table', Table)
-// Vue.component('TableColumn', TableColumn)
+Vue.component('ElTable', Table)
+Vue.component('ElTableColumn', TableColumn)
 Vue.component('Message', Message)
 // Vue.component('Form', Form)
 // Vue.component('FormItem', FormItem)
-// Vue.component('Input', Input)
-// Vue.component('ElInputExtend', InputFixed)
-// Vue.component('ElInput', Input)
-// Vue.component('InputNumber', InputNumber)
+Vue.component('Input', Input)
+Vue.component('ElInputExtend', InputFixed)
+Vue.component('ElInput', Input)
+Vue.component('InputNumber', InputNumber)
 // Vue.component('Checkbox', Checkbox)
 // Vue.component('CheckboxButton', CheckboxButton)
 // Vue.component('CheckboxGroup', CheckboxGroup)
@@ -122,8 +124,11 @@ Vue.component('Tooltip', Tooltip)
 // Vue.component('Card', Card)
 // Vue.component('ColorPicker', ColorPicker)
 // Vue.component('Container', Container)
-// Vue.component('Sider', Aside)
-// Vue.component('Main', Main)
+Vue.component('ElContainer', Container)
+Vue.component('ElSider', Aside)
+// Vue.component('ElHeader', Header)
+// Vue.component('ElFooter', Footer)
+Vue.component('ElMain', Main)
 // Vue.component('Avatar', Avatar)
 // Vue.component('Steps', Steps)
 // Vue.component('Step', Step)
@@ -135,7 +140,7 @@ Vue.component('Tooltip', Tooltip)
 // Vue.component('CollapseItem', CollapseItem)
 // Vue.component('Upload', Upload)
 // Vue.component('Breadcrumb', Breadcrumb)
-// Vue.component('BreadcrumbItem', BreadcrumbItem)
+Vue.component('BreadcrumbItem', BreadcrumbItem)
 
 // Vue.use(Switch) // Vue 规定的保留 HTML Tag , 不能直接像别的组件一样注册成 Switch , 要用 el-switch
 // Vue.use(Loading.directive)

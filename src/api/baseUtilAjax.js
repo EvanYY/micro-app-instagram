@@ -32,7 +32,8 @@ export class Request {
     if (error200 && response && response.data.code !== '1') this.er(error200, response.data, response)
     if (response && Array.isArray(callBacks) && callBacks.length) this.cbs(callBacks, response.data, response)
     if (!response) return response
-    return response.data || response
+    // return response.data || response
+    return response
   }
 
   async cbs (callBacks, data) {
